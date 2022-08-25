@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.imageapplication.MainActivityViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ImgPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="profile photo"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Profile photo"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/photo2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.389"
+            app:srcCompat="@android:mipmap/sym_def_app_icon"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@tools:sample/avatars"/>
+            <!--app:countImages="@{viewModel.imagesCounter}"-->
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update images"
+            app:layout_constraintBottom_toTopOf="@+id/photo2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo" />
+
+        <ImageView
+            android:id="@+id/photo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.548"
+            tools:srcCompat="@tools:sample/avatars"/>
+            <!--app:countImages="@{viewModel.imagesCounter}"-->
+
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
